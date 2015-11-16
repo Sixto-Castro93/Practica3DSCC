@@ -29,10 +29,10 @@ namespace Practica3DSCC
         GT.SocketInterfaces.DigitalOutput salida;
         GT.SocketInterfaces.AnalogInput entrada;
         Double valor=0.0;
-        Double umbral = 2.90;
+        Double umbral = 3.10;
         Boolean objetoDetectado = false;
        
-         GT.Timer timer = new GT.Timer(2000); // every second (1000ms)
+         GT.Timer timer = new GT.Timer(250); // every second (1000ms)
         
 
      
