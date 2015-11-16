@@ -59,11 +59,23 @@ namespace Practica3DSCC
             //Inicializa los botones en la interface
             btn_start = (Button)controlWindow.GetChildByName("start");
             btn_stop = (Button)controlWindow.GetChildByName("stop");
+            sensor.ObjectOn += sensor_ObjectOn;
+            sensor.ObjectOff += sensor_ObjectOff;
             btn_start.TapEvent += btn_start_TapEvent;
             btn_stop.TapEvent += btn_stop_TapEvent;
 
             //Selecciona mainWindow como la ventana de inicio
             Glide.MainWindow = controlWindow;
+        }
+
+        void sensor_ObjectOff()
+        {
+            Debug.Print("Evento objectOFF lanzado");
+        }
+
+        void sensor_ObjectOn()
+        {
+            Debug.Print("Evento objectOn lanzado");
         }
 
         void btn_stop_TapEvent(object sender)
